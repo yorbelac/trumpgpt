@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 function Chat() {
 
-    const url = 'https://0265-173-216-112-49.ngrok-free.app/v1/chat/completions';
+    const url = 'handy-sculpin-reliably.ngrok-free.app/v1/chat/completions';
     const systemPrompt = { role: 'system', content: 'Answer the prompt briefly, but thoroughly.' }
 
     const [message, setMessage] = useState('');
