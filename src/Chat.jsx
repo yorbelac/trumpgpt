@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import fetch from 'node-fetch'
 
 function Chat() {
 
@@ -8,7 +7,6 @@ function Chat() {
 
     const [message, setMessage] = useState('');
     const [chat, setChat] = useState([]);
-    const [trigger, setTrigger] = useState(0)
 
     const handleMessageChange = (event) => {
         setMessage(event.target.value);
