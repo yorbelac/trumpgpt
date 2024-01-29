@@ -1,5 +1,5 @@
 {
-  "name": "trumpgpt",
+  "name": "trumptgpt",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -41,5 +41,5 @@
   "devDependencies": {
     "gh-pages": "^6.1.1"
   },
-  "homepage": "https://yorbelac.github.io/trumpgpt"
+  "homepage": "https://yorbelac.github.io/trumptgpt"
 }
