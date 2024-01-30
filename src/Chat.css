@@ -130,7 +130,7 @@ Mixins
     overflow: hidden;
     position: relative;
     width: 100%;
-    margin-top:10px;
+    margin-top:5px;
     
     & .messages-content {
       position: absolute;
@@ -138,6 +138,10 @@ Mixins
       left: 0;
       height: 100%;
       width: 100%;
+      overflow-y: scroll;
+      overflow-x:hidden;
+      padding-right:15px;
+      padding-left:15px;
     }
   
     
@@ -150,8 +154,6 @@ Mixins
       margin: 8px 0;
       font-size: 14px;
       line-height: 1.4;
-      margin-left: 20px;
-      margin-right: 20px;
       margin-top: 10px;
       position: relative;
       text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
@@ -194,7 +196,7 @@ Mixins
       &.message-personal {
         float: right;
         color: #fff;
-        text-align: right;
+        text-align: left;
         background: linear-gradient(120deg, #248A52, #257287);
         border-radius: 10px 10px 0 10px;
         
