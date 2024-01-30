@@ -20,7 +20,9 @@ function Chat() {
     };
 
     const handleUserChat = async () => {
-        let newChat = [...chat, { role: 'user', content: message }]
+        const messageContainer = message
+        let newChat = [...chat, { role: 'user', content: messageContainer }]
+        setMessage(''); // Clear the message input after submitting
         setChat(newChat)
         const data = { //define data to be sent to api
             messages: [systemPrompt, ...newChat,],
@@ -40,9 +42,8 @@ function Chat() {
         });
 
         const result = await response.json();
-        newChat = [...chat, { role: 'user', content: message }, result.choices[0].message]
+        newChat = [...chat, { role: 'user', content: messageContainer }, result.choices[0].message]
         setChat(newChat); // Corrected the update of chat state
-        setMessage(''); // Clear the message input after submitting
         setLoading(false)        
     };
 
