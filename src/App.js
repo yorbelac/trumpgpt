@@ -1,15 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import Chat from './Chat'
+import "./Chat.css"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Uncensored GPT
-        </p>
-      </header>
+    <div className="chat">
       <Chat/>
     </div>
   );
