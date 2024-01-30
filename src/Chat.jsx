@@ -47,7 +47,16 @@ function Chat() {
         setLoading(false)        
     };
 
-
+    const exportJsonToTxt = (jsonData, filename) => {
+        const textData = JSON.stringify(jsonData, null, 2); // Convert JSON to formatted string
+        const dataStr = "data:text/plain;charset=utf-8," + encodeURIComponent(textData);
+        const downloadAnchorNode = document.createElement('a');
+        downloadAnchorNode.setAttribute("href", dataStr);
+        downloadAnchorNode.setAttribute("download", filename + ".txt");
+        document.body.appendChild(downloadAnchorNode); // required for firefox
+        downloadAnchorNode.click();
+        downloadAnchorNode.remove();
+      };
 
     return (
         <div className='chat'>
@@ -55,7 +64,7 @@ function Chat() {
             <div className='chat-title'>
                 <h1>WizardLM 1.0 via Caleb Roy</h1>
                 <h2>Uncensored Llama2 13B Q5_K_M</h2>
-                <figure class="avatar">
+                <figure class="avatar" onClick={() => exportJsonToTxt(chat, "chat")}>
                     <img src="https://tabsapp.s3.amazonaws.com/ai.png" /></figure>
             </div>
 
