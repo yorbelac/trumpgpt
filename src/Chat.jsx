@@ -69,6 +69,12 @@ function Chat() {
                 <textarea type="text" class="message-input" placeholder="Type message..." value={message} onChange={handleMessageChange}></textarea>
                 <button type='submit' class="submit-button" onClick={handleUserChat}>Send</button>
             </div>
+            <div className='chat-title'>
+                <h1>Coded and Facilitated by Caleb Roy</h1>
+                <h2>Model trained and tuned by The Bloke (HUGGINGFACE.co)</h2>
+                <figure class="avatar">
+                    <img src="https://tabsapp.s3.amazonaws.com/ai.png" /></figure>
+            </div>
         </div>
     );
 }
